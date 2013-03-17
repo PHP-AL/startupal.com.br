@@ -1,0 +1,303 @@
+//
+// Responsive: Tablet to desktop
+// -------------------------------------------------- 
+
+@media (max-width: @navbarCollapseWidth) {
+	
+	
+  	// Layout 
+  	// -------------------------
+  	body {
+		margin: 0;
+  	}
+
+  	.navbar-fixed-top .navbar-inner, 
+  	.navbar-fixed-bottom .navbar-inner {
+		padding: 0 @gridGutterWidth;
+		.box-sizing(border-box);
+  	}
+
+  	.navbar-fixed-top {
+		margin: 0;
+  	}
+
+  	.section {
+		padding-left: @gridGutterWidth;
+		padding-right: @gridGutterWidth;
+		.box-sizing(border-box);
+  	}
+
+	#colophon {
+		padding-left: @gridGutterWidth;
+		padding-right: @gridGutterWidth;  
+		.box-sizing(border-box);
+	}
+
+
+	// Nav 
+	// -------------------------
+	.navbar .btn-navbar {
+		border-color: #111;
+		box-shadow: none;
+	}
+
+	.navbar .nav {
+		margin-bottom: 0;
+	}
+
+	.navbar .nav > li {
+		margin-left: 0;
+		border-top: 1px solid @grayDarker;
+	}
+
+	// Active nav items
+	.nav .active {
+		border-bottom: none; 
+	}
+
+
+	.select-page.dropdown-toggle {
+		height: 29px;
+		border-color: #111;
+	}
+
+	.select-page.open .dropdown-toggle {
+		border-color: #fff;
+	}
+
+	// Special style
+	// -------------------------
+
+	// Team 
+	.team {
+		.section-description {
+		  padding-left: 0;
+		  padding-right: 0;
+		}
+	}
+
+}
+
+
+
+//
+// Responsive: Landscape phone to desktop/tablet
+// --------------------------------------------------
+@media (max-width: 767px) {
+	body {
+		padding: 0;
+	}
+
+	// Grayscale
+	// -------------------------
+	.img_grayscale {
+		left: 0 !important;
+		margin-left: 0 !important;
+	}
+
+	// Section
+	// -------------------------
+	.section-description {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	// Special style
+	// -------------------------
+
+	// Hearder
+	.header .hero-unit h1 {
+		line-height: 1.2;
+	}
+  
+	// Introducing
+	.introducing .block {
+		margin-top: @gridColumnWidth - @gridGutterWidth;
+		float: left;
+		width: 50%;
+
+		&:first-child {
+			margin-top: 0;
+			width: 100%;
+		}
+	}
+
+	// Portfolio
+	.portfolio .row-fluid:first-child .block:first-child {
+		margin-top: 0; 
+	}
+
+	.portfolio .block {
+		margin-top: @gridColumnWidth / 2;
+	}
+
+	.portfolio .block img {
+		width: 100%;
+		height: auto;
+	}
+
+	.portfolio .carousel-nav .carousel-control {
+		display: block;
+		z-index: 999;
+		background: url(../img/arrow-left-right.png) no-repeat 10px center @white;
+		text-indent: -9999px;
+
+		&.right {
+			background-position: -27px center;
+		}
+	}
+
+	.portfolio .carousel  > .carousel-nav:before {
+		display: none;
+	}
+
+	.portfolio .carousel-nav ul,
+	.portfolio .carousel-nav:before {
+		display: none;
+	}
+
+	// Team
+	.personal {
+		width: 50% !important;
+		float: left !important;
+
+		.img_grayscale {
+			left: 50% !important;
+			margin-left: -120px !important;
+		}
+	}
+
+	.personal:first-child + .personal + .personal {
+  		clear: left;
+  	}
+
+	// Clients
+	.testimonial {
+		margin-top: @gridColumnWidth - @gridGutterWidth;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	.client {
+		width: 33.3% !important;
+		float: left !important;
+	}
+
+	// Contact
+	.contact {
+		address {
+			float: left !important;
+			width: 50% !important;
+		}
+
+		.contact-form {
+			padding-left: 0;
+			margin-top: @gridColumnWidth - @gridGutterWidth;
+		}
+	}
+}
+
+
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@media (max-width: 599px) {
+	// Common
+	// -------------------------
+
+	//Button
+
+	.btn-large {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	// Nav 
+	// -------------------------
+
+	// .navbar .select-theme {
+	// 	margin-left: -30px;
+	// }
+
+	.select-page {
+		margin-left: -30px !important;
+	}
+
+	// Special style
+	// -------------------------
+
+  	// Hearder
+  	.header .hero-unit h1 {
+  		font-size: 36px;
+  	}
+  	.header .hero-unit p{
+  		font-size: 14px;
+  		line-height: 20px;
+  	}
+  	.hasCountdown{
+  		.countdown_section{
+  			.size(100px,100px);
+  			margin:5px;
+  		}
+
+  	}
+
+  
+	// Introducing
+	.introducing .block  {
+		width: 100%;
+	}
+
+	// Portfolio
+	.portfolio .block {
+		width: 100%;
+	}
+
+	.modal-data, .project-data {
+		.first {
+			width: 100%;
+		}
+	}
+
+
+
+	// Team
+	.personal {
+		width: 100% !important;
+		margin-top: @gridColumnWidth - @gridGutterWidth;
+
+		&:first-child {
+		  	margin-top: 0;
+		}
+	}
+
+	// Clients
+	.clients .client {
+		width: 50% !important;
+		float: left !important;
+	}
+
+	// Contact
+	.contact {
+		address {
+		  	width: 100% !important;
+		}
+
+		.wpcf7-form-control-wrap {
+			width: 100% !important;
+			margin-left: 0 !important;
+		}
+	}
+}
+
+
+@media (max-width: 320px) {
+	// Button  
+	// -------------------------
+	.btn-large {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+}

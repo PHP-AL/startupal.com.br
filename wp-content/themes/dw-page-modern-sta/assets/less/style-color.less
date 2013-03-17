@@ -1,0 +1,173 @@
+/**
+ *  Theme Name: DW Page
+ *  Description: One Page Responsive Wordpress Theme
+ *  Author: DesignWall
+ *  Author URI: http://designwall.com
+ *  Version: 1.0
+ *  License: GNU General Public License v2 or later
+ *  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+// Core variables and mixins
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "mixins.less";
+
+
+.section.clients  {
+	border-top: 1px solid #ddd;
+}
+
+.project-data [class*="icon-"] {
+	background-image: url(assets/img/glyphicons-halflings-white.png);
+} 
+
+//
+// SECTIONS STYLE COLOR
+// ----------------------------------------------------------
+
+// color black
+// -------------------------
+
+// Section 
+
+.section.style-1 {
+	background-color: @black; 
+
+	// Section title
+	.section-title {
+		h1 {
+	  		color: @white;
+		}
+
+		p {
+	  		color: @gray;
+		}
+	}
+
+	// Section content
+	.section-content {
+		h2, h2 a, h3, h3 a {
+	  		color: @white;
+		}
+
+		h2 p, h3 p {
+	  		color: @gray;
+		}
+
+		// Header 
+		.header h1 {
+	  		color: @white;
+		}
+
+		// Introducing
+		.introducing {
+		  	.section-img {
+				border: 5px solid @white;
+
+				[class*="icon-tpl"] {
+					background-image: url("@{iconTplWhite}");
+				}
+		  	}
+		}
+
+		// Portfolio 
+
+		.portfolio {
+			.carousel-nav {
+				&:before {
+					background: @grayDark;
+				}
+
+				ul {
+					background: @black;
+				}
+
+				li {
+					border: 1px solid @grayDark;
+				}
+			}
+		}
+
+		// Clients
+
+		.clients {
+		  	border-top-color: @grayDark;
+
+		  	.thumbnail {
+		  		background-color: @white;
+		  		padding: 5px;
+		  	}
+		}
+
+		// Contact 
+
+		.contact {
+			textarea,
+			input[type="text"],
+			input[type="password"],
+			input[type="datetime"],
+			input[type="datetime-local"],
+			input[type="date"],
+			input[type="month"],
+			input[type="time"],
+			input[type="week"],
+			input[type="number"],
+			input[type="email"],
+			input[type="url"],
+			input[type="search"],
+			input[type="tel"],
+			input[type="color"],
+			.uneditable-input {
+				background-color: @black;
+				border-color: @grayDark;
+
+				&:focus {
+				  	background-color: @white;
+				}
+		  	}
+
+		  	// Contact form 7
+
+			.wpcf7-not-valid {
+				background-color: @white !important;
+			}
+
+			// .wpcf7-form div.wpcf7-mail-sent-ng,
+			// .wpcf7-form div.wpcf7-validation-errors {
+			// 	color: @white;
+			// 	border-color: #f00;
+			// 	background-color: #f00; 
+			// }
+
+			// .wpcf7-form div.wpcf7-mail-sent-ok {
+			// 	color: @white;
+			// 	border-color: #398F14;
+			// 	background-color: #398F14;
+			// }
+
+		  	.map {
+				border: 1px solid @grayDark;
+		  	}
+		}
+	}
+}
+
+
+// color white smoke
+// -------------------------
+
+.section.style-2 {
+	background-color: #f5f5f5;
+
+	// Section content
+	.section-content {
+
+		.portfolio {
+			.carousel-nav {
+				ul {
+					background: #f5f5f5;
+				}
+			}
+		}
+	}
+}

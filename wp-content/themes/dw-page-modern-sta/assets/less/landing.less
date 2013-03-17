@@ -1,0 +1,134 @@
+#landingpage{
+	.hero-unit h1{
+		color:#fff;
+	}
+}
+.hasCountdown {
+	font-family: @baseFontFamily;
+	font-weight: 400;
+ 	.countdown_section {
+ 		display: inline-block;
+ 		border:5px solid darken(@textColor,30%);
+ 		padding:30px 0 27px;
+ 		margin: 10px;
+ 		text-align: center;
+ 		font-size: @baseFontSize;
+ 		line-height: 20px;
+ 		.border-radius(500px);
+ 		.square(120px);
+ 		.box-sizing(border-box);
+ 	}
+ 	.countdown_amount{
+ 		color:@white;
+ 		font-size: @baseFontSize*2+2; 
+ 		
+ 	}
+}
+
+body[class*="landing"] {
+	h3 {
+		color:@white;
+		line-height: 1;
+		font-weight: 400;
+		}
+
+	.wpcf7 {
+		padding:0;
+		font-size: @baseFontSize;
+		font-weight: 400;
+		textarea,
+		input[type="text"],
+		input[type="password"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="date"],
+		input[type="month"],
+		input[type="time"],
+		input[type="week"],
+		input[type="number"],
+		input[type="email"],
+		input[type="url"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="color"],
+		.uneditable-input {
+			background-color: @black;
+			border-color: @grayDark;
+			font-size: @fontSizeSmall;
+			width:270px;
+			height: 34px;
+			padding:0 40px 0 10px; 
+
+			&:focus {
+			  	background-color: @white;
+			}
+	  	}
+
+	  	input.wpcf7-validates-as-email{
+	  		background: url(../img/feed.png) 96.5% center no-repeat;
+	  	}
+	}
+
+	.wpcf7-form div.wpcf7-response-output {
+		display: inline-block !important;
+		margin-top: 0;
+	}
+}
+
+body[class*="landing"].ie8 {
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"],
+	.uneditable-input {
+		line-height: 33px;
+	}
+}
+
+//
+// Responsive
+// -------------------------------------------------- 
+@media (max-width: @navbarCollapseWidth) {
+	body[class*="landing"] .navbar .btn-navbar {
+		display: none;
+	}
+}
+
+@media (max-width: 599px) {
+	body[class*="landing"] .wpcf7 {
+		textarea,
+		input[type="text"],
+		input[type="password"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="date"],
+		input[type="month"],
+		input[type="time"],
+		input[type="week"],
+		input[type="number"],
+		input[type="email"],
+		input[type="url"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="color"],
+		.uneditable-input {
+			width: 100%;
+			.box-sizing(border-box);
+		}
+	}
+
+	.hasCountdown .countdown_section {
+		display: block !important;
+		margin: 20px auto !important;
+	}
+}

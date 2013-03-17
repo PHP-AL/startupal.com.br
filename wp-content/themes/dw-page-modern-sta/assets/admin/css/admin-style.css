@@ -1,0 +1,7 @@
+#order-for-onepage{
+    width: 100%;
+}
+
+#nav-menu-dw-onepage.postbox .howto input, #nav-menu-dw-onepage .howto span{
+    float:none;
+}

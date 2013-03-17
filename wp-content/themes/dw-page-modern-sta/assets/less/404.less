@@ -1,0 +1,44 @@
+.error404{
+	background: @black;
+	padding: 0;
+	margin:0;
+	#nav{
+		display: none;
+	}
+	#page404{
+		min-height: 500px;
+		.container{
+			padding:40px 0 100px;
+			height: 100%;
+		}
+		h1{
+			text-indent: -9999px;
+			background: url(../img/404.png) center center no-repeat; 
+			padding: 50px 0;
+			margin: 25px 0;
+		}
+		h2{
+			color: @white;
+			font-size: @baseFontSize*4;
+			margin-bottom: 40px;
+			line-height: 1.2;
+		}
+		span{
+			font-size: @fontSizeSmall;
+		}
+		a{
+			text-decoration: underline;
+			color: @textColor;
+
+			&:hover {
+				color: @linkColor;
+			}
+		}
+	}
+} 
+
+@media(max-width: 599px){
+	.error404 #page404 h2 {
+		font-size: (@baseFontSize*4) - 6px;
+	}
+}
